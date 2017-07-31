@@ -49,7 +49,7 @@ public class DockerBuilderControlOptionStop extends DockerBuilderControlOptionSt
         if (remove) {
             LOG.info("Removing container {}...", containerId);
             llog.println("Removing container " + containerId + "...");
-            client.removeContainerCmd(containerId);
+            client.removeContainerCmd(containerId).exec();
         }
     }
 
